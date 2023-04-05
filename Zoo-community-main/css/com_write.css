@@ -1,0 +1,207 @@
+@charset "utf-8";
+@import 'theme/layout.css';
+* {
+  /* outline: 1px solid green; */
+}
+
+.hd-r {
+  border-bottom: 2px solid var(--color-grey1);
+}
+
+.container {
+  background-color: var(--color-background);
+  padding: 30px;
+}
+
+p {
+  margin: 0;
+}
+
+/* 메인 컨텐츠 */
+.main-list {
+  grid-area: main-list;
+  width: 100%;
+}
+.main-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.main-list .list .main {
+  /* height: 50px; */
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px 0;
+}
+.main-list .list .selectBox {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  border-radius: 4px;
+  border: 2px solid #f29a2e;
+  font-size: 16px;
+}
+.main-list .list .selectBox .select {
+  width: inherit;
+  /* display: none; */
+  height: inherit;
+  background: transparent;
+  border: 0 none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+  /* opacity: 0; */
+  appearance: none; /* 기록 */
+}
+
+.main-list .list .selectBox .select option {
+  background: #ffd65f;
+  color: #fff;
+  padding: 3px 0;
+  font-size: 16px;
+}
+.main-list .list .selectBox .icoArrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 35px;
+  height: inherit;
+  border-left: 2px solid #ffd65f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectBox .icoArrow i {
+  transition: 0.3s;
+}
+
+.selectBox .select:focus-visible + .icoArrow i {
+  transform: rotate(180deg);
+}
+
+/* 메인제목 */
+.title {
+  grid-area: title;
+  width: 100%;
+}
+.title .title__name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.title .title__name .main {
+  font-weight: bold;
+  font-size: 25px;
+  margin-right: 50px;
+}
+.title .title__name .chk {
+  display: flex;
+  margin: 20px;
+  align-items: baseline;
+}
+.title .title__name .chk input {
+  margin: 2px;
+}
+
+/* 제목입력창 */
+.main-title {
+  grid-area: main-title;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main-title .input input {
+  height: 30px;
+  width: 55%;
+  font-size: 15px;
+  border-radius: 4px;
+  padding: 0;
+  /* border: 0; */
+  border-color: #ffd65f;
+}
+
+/* 본문입력창 */
+.body-write {
+  grid-area: body-write;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.body-write .input {
+  display: flex;
+  outline: 2px solid #ffd65f;
+  border-radius: 4px;
+}
+.body-write .input input {
+  height: 300px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* 첨부파일버튼 */
+.file {
+  grid-area: file;
+  /* width: 100%; */
+  font-size: 17px;
+  font-weight: bold;
+  padding: 20px;
+  margin-bottom: 10px;
+  outline: 2px solid #f26d3d;
+  border-radius: 4px;
+}
+
+/* 사진첨부 */
+.pic {
+  grid-area: pic;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.pic .pic__file {
+  display: flex;
+  align-items: center;
+}
+.pic .pic__file .img {
+  display: flex;
+  padding: 2px;
+  outline: 2px solid #ffd65f;
+  border-radius: 15px;
+  margin-right: 10px;
+  align-items: center;
+  height: 20px;
+}
+.pic .pic__file .img .pic__img {
+  outline: none;
+  align-items: center;
+  margin-right: 5px;
+  font-size: 13px;
+}
+.pic img {
+  width: 20px;
+  margin: 0 5px;
+}
+.pic .pic__file .file__pic {
+  height: 100%;
+  display: flex;
+  font-size: 13px;
+}
+
+/* 글등록버튼 */
+.sign {
+  grid-area: sign;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sign button {
+  background-color: #ffd65f;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: black;
+}
