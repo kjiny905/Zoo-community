@@ -82,6 +82,146 @@ p {
   transform: rotate(180deg);
 }
 
+/* 동물태그선택 */
+.sort {
+  grid-area: sort;
+  width: 100%;
+  height: 80px;
+}
+
+.sort .search .left .tag {
+  margin-left: 10px;
+}
+
+.sort .left .tag {
+  margin-right: 1.2rem;
+}
+
+.sort .left .tag input[type='checkbox'] {
+  font-size: 0.8rem;
+}
+
+@media screen and (width <=800px) {
+  .sort .left .tag {
+    margin-right: 0.5rem;
+  }
+}
+
+.sort .search {
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+.sort .left {
+  width: auto;
+  border-radius: 4px;
+  outline: 3px solid #f29a2e;
+  display: flex;
+  height: 50px;
+}
+.sort .search .left .selectBox select:nth-of-type(1) {
+  margin-right: 30px;
+}
+
+.sort div {
+  /* display: flex; */
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+  /* margin-left: 10px; */
+}
+.sort .search {
+  display: flex;
+}
+.sort .search .input input {
+  height: 20px;
+  /* width: 70%; */
+  font-size: 15px;
+  border-radius: 4px;
+  border: 2px solid var(--color-main-point);
+  background-color: var(--color-background2);
+}
+.sort .search .input {
+  display: flex;
+  /* margin-right: 50px; */
+}
+.sort .search .input button {
+  margin-left: 10px;
+  width: 4rem;
+  padding: 3px;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px rgba(39, 27, 27, 0.5);
+  font-weight: 400;
+}
+
+.sort .search .left .selectBox {
+  margin-right: 20px;
+}
+
+/* select option */
+
+.sort .search .left .selectBox {
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.sort .search .left .selectBox .select {
+  width: inherit;
+  /* display: none; */
+  height: inherit;
+  background: transparent;
+  border: 0 none;
+  outline: 0 none;
+  padding: 0 5px;
+  position: relative;
+  z-index: 3;
+  /* opacity: 0; */
+  appearance: none; /* 기록 */
+}
+
+.sort .search .left .selectBox .select option {
+  background: #ffd65f;
+  color: #fff;
+  padding: 3px 0;
+  font-size: 16px;
+}
+.sort .search .left .selectBox .icoArrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 35px;
+  height: inherit;
+  border-left: 2px solid #ffd65f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkBtn {
+  width: 4rem;
+  border: 1px solid #ffd65f;
+  border-radius: 2rem;
+  background-color: #ffd65f;
+  margin-left: 1.2rem;
+}
+
+.sort .search .left .selectBox .icoArrow i {
+  width: 50%;
+  transition: 0.3s;
+}
+
+/* .sort .search .left .selectBox .icoArrow img {
+  width: 50%;
+  transition: 0.3s;
+} */
+
+.sort .search .left .selectBox .select:focus + .icoArrow img {
+  transform: rotate(180deg);
+}
+
 /* 메인제목 */
 .title {
   grid-area: title;
