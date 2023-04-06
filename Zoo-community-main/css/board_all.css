@@ -236,10 +236,11 @@ p {
 }
 .write-btn button {
   background-color: #ffd65f;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   padding: 5px 20px;
   border-radius: 10px;
+  color: black;
   border: 2px solid #f26d3d;
 }
 
@@ -283,7 +284,6 @@ p {
   outline: 3px solid #ffd65f;
   margin-bottom: 30px;
   border-radius: 10px;
-
 }
 .main-nick .kind_board {
   width: 20%;

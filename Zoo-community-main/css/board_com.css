@@ -231,13 +231,15 @@ p {
 }
 .write-btn button {
   background-color: #ffd65f;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: bold;
   padding: 5px 20px;
   border-radius: 10px;
+  color: black;
   border: 2px solid #f26d3d;
 }
 
+/* 선택한 동물태그 */
 .tag-list {
   grid-area: tag-list;
   width: 100%;

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>커뮤니티 상세 게시글</title>
+    <title>동물병원 상세 게시글</title>
     <!--  리뷰게시판 메인 css -->
-    <link rel="stylesheet" href="../css/board_com-detail.css" />
+    <link rel="stylesheet" href="../css/board_detail.css" />
     <!--  폰트 어썸 : 로고 -->
     <script src="https://kit.fontawesome.com/6631aa96e6.js" crossorigin="anonymous"></script>
   </head>
@@ -321,20 +321,13 @@
       <div class="main-title-l"></div>
       <div class="main-title">
         <div class="main-title__name">
-          <div class="name">커뮤니티 게시글 제목</div>
+          <div class="name">동물병원 게시글 제목</div>
         </div>
 
         <!-- 조회,좋아요 -->
         <div class="sub">
           <div class="num">
             <div class="num-cnt">조회수<p>4444</p></div>
-            <div class="num-cnt">좋아요<p>4444</p></div>
-            <div class="like-icons">
-              <!--  좋아요 누르기 전 아이콘 -->
-              <i class="fa-regular fa-heart"></i>
-              <!-- 좋아요 누른 후 아이콘 -->
-              <!-- <i class="fa-solid fa-heart"></i> -->
-            </div>
           </div>
         </div>
       </div>
@@ -351,6 +344,42 @@
         </div>
       </div>
       <div class="main-nick-r"></div>
+
+      <!-- 별점 -->
+      <div class="preview-l"></div>
+      <div class="preview">
+        <div class="info">
+          <div class="hos">
+            <div class="name">동물병원 이름</div>
+            <div class="img"><img src="" alt="" />사진</div>
+          </div>
+        <div class="star-ratings">
+          <div>총점</div>
+            <div id="result"></div>
+          <div class="star-rating space-x-4 mx-auto">
+            <input type="radio" id="5-stars" name="rating" value="5" v-model="ratings"/>
+            <label for="5-stars" class="star pr-4">★</label>
+            <input type="radio" id="4-stars" name="rating" value="4" v-model="ratings"/>
+            <label for="4-stars" class="star">★</label>
+            <input type="radio" id="3-stars" name="rating" value="3" v-model="ratings"/>
+            <label for="3-stars" class="star">★</label>
+            <input type="radio" id="2-stars" name="rating" value="2" v-model="ratings"/>
+            <label for="2-stars" class="star">★</label>
+            <input type="radio" id="1-star" name="rating" value="1" v-model="ratings" />
+            <label for="1-star" class="star">★</label>
+          </div>
+        </div>
+          <div class="review">
+            <div>4개의 후기</div>
+            <div class="img">
+              <button type="button">
+                <img src="/img/arrow.png" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preview-r"></div>
 
 
       <!-- 게시글내용 -->
@@ -389,7 +418,7 @@
         <div class="btn__che">
           <div class="btn__btn-list">
             <div class="list">
-              <button onclick="location.href='board_com.html'">
+              <button onclick="location.href='board_review.html'">
                 목록
               </button>
             </div>
@@ -397,7 +426,7 @@
           <div class="btn__btn">
             <div class="modi">
               <!-- 로그인 전, 후 수정 버튼 유무 달라야함 -->
-              <button onclick="location.href='board_com-edit.html'">수정</button>
+              <button onclick="location.href='board_edit.html'">수정</button>
             </div>
             <div class="del">
               <button class="openBtn">삭제</button>
@@ -408,7 +437,7 @@
                 <div class="alarm">
                   <div class="chk">게시글을 삭제하시겠습니까?</div>
                   <div class="btn">
-                    <button onclick="location.href='board_com.html'">확인</button>
+                    <button onclick="location.href='board_review.html'">확인</button>
                     <button class="closeBtn">취소</button>
                   </div>
                 </div>
@@ -527,6 +556,8 @@
     <script src="../js/clock.js"></script>
     <!-- 취소,삭제 모달 구현 -->
     <script src="../js/board_del_modal.js"></script>
+    <!-- 별점 모달 구현 -->
+    <script src="../js/board_star_modal.js"></script>
 
   </body>
 </html>

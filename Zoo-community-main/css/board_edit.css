@@ -245,6 +245,33 @@ p {
 .title .title__name .chk input {
   margin: 2px;
 }
+/* 별 */
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: #ffd65f;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
+}
 
 /* 제목입력창 */
 .main-title {
@@ -260,6 +287,24 @@ p {
   padding: 0;
   /* border: 0; */
   border-color: #ffd65f;
+}
+
+/* 동물병원 검색창 */
+.hos-search {
+  grid-area: hos-search;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.hos-search input {
+  border: none;
+  outline: 2px solid #ffd65f;
+  border-radius: 2px;
+  padding: 10px;
+  height: 10px;
+}
+.hos-search button {
+  color: white;
 }
 
 /* 본문입력창 */

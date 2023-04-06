@@ -328,20 +328,30 @@ p {
   font-size: 13px;
 }
 
-/* 글등록버튼 */
-.sign {
-  grid-area: sign;
+/* 등록,목록 버튼 */
+.btn {
+  grid-area: btn;
   width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
 }
-.sign button {
+.btn .detail button {
   background-color: #ffd65f;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  color: white;
-  padding: 10px 20px;
+  padding: 5px 20px;
   border-radius: 10px;
-  border: none;
   color: black;
+  border: 2px solid #f26d3d;
+}
+.btn .add button {
+  background-color: #ffd65f;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: black;
+  border: 2px solid #f26d3d;
+  margin-left: 10px;
 }

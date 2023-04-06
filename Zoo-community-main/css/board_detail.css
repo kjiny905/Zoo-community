@@ -168,6 +168,83 @@ p {
   margin-right: 10px;
 }
 
+/* 별점 */
+.preview {
+  grid-area: preview;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.preview .info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  background-color: #ffd65f;
+  border-radius: 5px;
+}
+.preview .info .hos {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+}
+.preview .info .hos .name {
+  height: 20px;
+}
+.preview .info .hos .img {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preview .info .review {
+  height: 80px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.preview .info .review button {
+  display: flex;
+  border: 0;
+  padding: 0;
+  background-color: #ffd65f;
+}
+.preview .info .star-ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+/* 별점 이벤트 */
+.star-rating input {
+  display: none;
+}
+.star-rating label {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
+}
+
 /* 게시글내용 */
 .content {
   grid-area: content;
